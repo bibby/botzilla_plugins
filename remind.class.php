@@ -17,9 +17,7 @@ class reminder extends ziggi
 		if($this->isEmpty())
 			$this->checkMsgs();
 		
-		$cmd = $this->getArg(0);
-		if( substr($cmd,0,1) == CMD_CHAR)
-			$cmd = substr($cmd,1);
+		$cmd = $this->getCmd();
 			
 		if($cmd == 'remind')
 			$this->addMsg();
